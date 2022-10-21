@@ -18,7 +18,7 @@ public class Process implements Comparable<Process>{
 
         Random rnd = new Random();
 
-        height = processTime * 2;
+        height = processTime;
 
         if (rnd.nextBoolean()) {
             height -= rnd.nextInt(delta);

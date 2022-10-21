@@ -11,11 +11,11 @@ public class Scheduler {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite a quantidade de processos: ");
-        List list = Core.makeProcess(sc.nextInt());
+        List list = Core.makeProcess(sc.nextInt(), 0, 10);
+        System.out.print("Digite a quantidade de processos: ");
+        List list2 = Core.makeProcess(sc.nextInt(), 10, 20);
         
         Collections.sort(list);
-        
-        System.out.println(list.toString());
-        
+        Collections.sort(list2);
     }
 }
