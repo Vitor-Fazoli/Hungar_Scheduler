@@ -9,6 +9,8 @@ import java.util.Random;
  */
 public class Core {
     
+    private static int count = 0;
+    
     public static List<Process> makeProcess(int n, int initial, int finall) {
         Random rnd = new Random();
         List<Process> list = new ArrayList<>();
@@ -30,6 +32,7 @@ public class Core {
     public static List<Process> insertList(List<Process> lMinus, List <Process> lPlus){
         
         boolean swap = true;
+            
         
         List<Process> list = new ArrayList<>();
         for(int i = 0; i < lPlus.size(); i++){
@@ -48,22 +51,25 @@ public class Core {
         
         return list;
     }
-    
+    private static void processing(){
+        for(int i =0; i <= 100; i++){
+            if(i == 100){
+                System.out.println(".");
+                count++;
+            }
+        }
+    }
     public static void processFinished(List<Process> o) {
-        
-        int count = 0;
         
         for(int i = 0; i < o.size(); i++){
             int height = o.get(i).getHeight();
+            count++;
             for (int k = 0; k <= height; k++) {
-                System.out.print(".");
-                count++;
-                if (k == height) {
-                    System.out.println("processo realizado");
-                }
+                    processing();
+                    count++;
             }
         }
         
-        System.out.println(count + " miliseconds");
+        System.out.println(count + " Miliseconds");
     }
 }
