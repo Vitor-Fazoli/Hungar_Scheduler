@@ -9,8 +9,8 @@ public class Scheduler {
 
     public static void main(String[] args) throws IOException {
         // 70/30 for process  
-        List listMinus = Core.makeProcess(70, 0, 10);
-        List listPlus = Core.makeProcess(30, 10, 20);
+        List listMinus = Core.makeProcess(70000, 5, 20);
+        List listPlus = Core.makeProcess(30000, 25, 50);
   
         Collections.sort(listMinus);
         Collections.sort(listPlus);

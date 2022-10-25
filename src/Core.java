@@ -64,6 +64,6 @@ public class Core {
             }
         }
         
-        System.out.println(count + "miliseconds");
+        System.out.println(count + " miliseconds");
     }
 }
