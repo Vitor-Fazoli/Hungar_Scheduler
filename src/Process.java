@@ -32,7 +32,7 @@ public class Process implements Comparable<Process>{
     }
     public String toString()
     {
-        return "(Process: " + this.id + "; " + this.height +")";
+        return "(Process: " + this.id + "; " + this.height +")\n";
     }
 
     public int getHeight() {

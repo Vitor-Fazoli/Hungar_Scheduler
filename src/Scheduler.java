@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Collections;
 
 /**
@@ -9,13 +8,18 @@ import java.util.Collections;
 public class Scheduler {
 
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Digite a quantidade de processos: ");
-        List list = Core.makeProcess(sc.nextInt(), 0, 10);
-        System.out.print("Digite a quantidade de processos: ");
-        List list2 = Core.makeProcess(sc.nextInt(), 10, 20);
+        // 70/30 for process  
+        List listMinus = Core.makeProcess(70, 0, 10);
+        List listPlus = Core.makeProcess(30, 10, 20);
+  
+        Collections.sort(listMinus);
+        Collections.sort(listPlus);
         
-        Collections.sort(list);
-        Collections.sort(list2);
+        List result = Core.insertList(listMinus, listPlus);
+        
+        System.out.println(result.toString());
+        
+        
+        Core.processFinished(result);
     }
 }

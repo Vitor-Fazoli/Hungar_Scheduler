@@ -15,7 +15,6 @@ public class Core {
 
         for (int i = 0; i < n; i++) {
             Process p1 = new Process(rnd.nextInt(initial, finall));
-            System.out.println(p1.getHeight());
             list.add(p1);
         }
 
@@ -30,11 +29,10 @@ public class Core {
     */
     public static List<Process> insertList(List<Process> lMinus, List <Process> lPlus){
         
-        int size = lMinus.size();
-        boolean swap = false;
+        boolean swap = true;
         
         List<Process> list = new ArrayList<>();
-        for(int i = 0; i <= size; i++){
+        for(int i = 0; i < lPlus.size(); i++){
             if(swap){
                 list.add(lMinus.get(i));
                 swap = false;
@@ -43,18 +41,29 @@ public class Core {
                 swap = true;
             }
         }
+
+        for(int i = lPlus.size(); i < lMinus.size() ; i++){
+            list.add(lMinus.get(i));
+        }
         
         return list;
     }
     
-    public static void processFinished() {
+    public static void processFinished(List<Process> o) {
+        
         int count = 0;
-        for (int i = 0; i <= 100; i++) {
-            System.out.print(".");
-            count++;
-            if (i == 100) {
-                System.out.println("processo realizado");
+        
+        for(int i = 0; i < o.size(); i++){
+            int height = o.get(i).getHeight();
+            for (int k = 0; k <= height; k++) {
+                System.out.print(".");
+                count++;
+                if (k == height) {
+                    System.out.println("processo realizado");
+                }
             }
         }
+        
+        System.out.println(count + "miliseconds");
     }
 }
