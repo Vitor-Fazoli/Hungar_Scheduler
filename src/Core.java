@@ -9,8 +9,6 @@ import java.util.Random;
  */
 public class Core {
     
-    private static int count = 0;
-    
     public static List<Process> makeProcess(int n, int initial, int finall) {
         Random rnd = new Random();
         List<Process> list = new ArrayList<>();
@@ -55,7 +53,6 @@ public class Core {
         for(int i =0; i <= 100; i++){
             if(i == 100){
                 System.out.println(".");
-                count++;
             }
         }
     }
@@ -63,13 +60,9 @@ public class Core {
         
         for(int i = 0; i < o.size(); i++){
             int height = o.get(i).getHeight();
-            count++;
             for (int k = 0; k <= height; k++) {
                     processing();
-                    count++;
             }
         }
-        
-        System.out.println(count + " Miliseconds");
     }
 }
