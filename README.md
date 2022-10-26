@@ -1,4 +1,4 @@
-versão portugues
+> versão português
 
 # Descrição do escalonador
   A ideia inicial do escalonador é ter um sistema de pesos porém com uma variação aleatória entre eles, ele carrega um processo grande e um pequeno, trocando entre eles para fazer o processamento e calcula um erro de X± para cima ou para baixo, definindo o peso de forma mais dinâmica, onde X é o valor como um erro
@@ -18,12 +18,12 @@ Assim quando indentificamos um valor do processo ele recebe uma margem de erro p
 
   Dessa forma, todo esse procedimento é repetido para os outros processos definidos com tamanhos diferentes e ao final é gerado um gráfico comparativo dos processos de tamanho 10-20;50-200 e 40-50; 150-350.
 
-english version 
+> english version 
 
 Scheduler Description
 The scheduler's initial idea is to have a system of weights but with a random variation between them, it loads a large and a small process, switching between them to do the processing and calculates an error of X± up or down, defining the weight more dynamically, where X is the value as an error
 
-So when we identify a process value it receives a margin of error so it can have a queue advantage, and improve processing throughput, for tests these values will vary to see the best possible version for the scheduler. Description of the scheduler The initial idea of ​​the scheduler is to have a system of weights but with a random variation between them, it loads a large and a small process, switching between them to do the processing and calculates an error of X± up or down , setting the weight more dynamically, where X is the value as an error
+So when we identify a process value it receives a margin of error so it can have a queue advantage, and improve processing throughput, for tests these values will vary to see the best possible version for the scheduler. Description of the scheduler The initial idea of the scheduler is to have a system of weights but with a random variation between them, it loads a large and a small process, switching between them to do the processing and calculates an error of X± up or down , setting the weight more dynamically, where X is the value as an error
 
 So when we identify a process value it receives a margin of error so it can have a queue advantage, and improve processing throughput, for tests these values will vary to see the best possible version for the scheduler.
 
